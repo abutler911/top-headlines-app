@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgba(100, 149, 237, 0.5);
+}
+
+li:nth-child(even) {
+    background-color: #a52222;
+}
+
+li:nth-child(odd) {
+    background-color: #e6e6e6;
+}
+
+.list-group-item {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+h5 {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+p {
+    font-size: 1rem;
+    margin: 0;
+}
