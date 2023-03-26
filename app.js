@@ -21,9 +21,7 @@ app.get("/headlines", async (req, res) => {
         country,
       },
     });
-
-    // const headlines = response.data.articles.map((article) => article.title);
-    // const urls = response.data.articles.map((article) => article.url);
+    console.log(response.data.articles);
     const articleData = response.data.articles;
     res.render("headlines", { articleData });
   } catch (error) {

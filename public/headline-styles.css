@@ -5,14 +5,6 @@ body {
     background-color: rgba(100, 149, 237, 0.5);
 }
 
-li:nth-child(even) {
-    background-color: #a52222;
-}
-
-li:nth-child(odd) {
-    background-color: #e6e6e6;
-}
-
 .list-group-item {
     padding: 10px;
     margin-bottom: 10px;
@@ -20,13 +12,30 @@ li:nth-child(odd) {
     border-bottom-right-radius: 20px;
 }
 
-h5 {
-    font-weight: bold;
+h4 {
+    font-weight: 500;
     font-size: 1.2rem;
-    margin: 0;
+    margin-bottom: 10px;
 }
 
 p {
     font-size: 1rem;
-    margin: 0;
+    margin-bottom: 10px;
+}
+
+.btn {
+    width: 100%;
+}
+
+.article-image {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.date-time-stamp {
+    font-size: 0.6rem;
 }
