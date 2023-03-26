@@ -41,6 +41,7 @@
           <p class="date-time-stamp">Published at: <%=article.publishedAt%></p>
           <h4><strong><%= article.title %></strong></h4>
           <p class="text-muted"><%= article.description %></p>
+          <p class="text-muted source">Source: <%=article.source.name%></p>
           <a href="<%=article.url%>"
             ><button type="button" class="btn btn-primary">Read more</button></a
           >
