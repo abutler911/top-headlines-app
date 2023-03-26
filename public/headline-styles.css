@@ -32,7 +32,9 @@ p {
 }
 
 .btn {
-    width: 100%;
+    width: 80%;
+    font-size: 1.6rem;
+    margin-left: 10%;
 }
 
 .article-image {
