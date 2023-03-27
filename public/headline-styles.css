@@ -2,7 +2,10 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: rgba(100, 149, 237, 0.5);
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .list-group-item {
@@ -30,6 +33,26 @@ p {
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 550px;
+}
+
+.article-image {
+    object-fit: cover;
+    height: 200px
+}
+
+/* .card-body {
+    height: 400px;
+    overflow: auto;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+} */
+
+.card-body a {
+    margin-top: auto;
 }
 
 .badge {
@@ -46,8 +69,19 @@ p {
 
 }
 
+.headline-title {
+    text-decoration: none;
+    color: inherit;
+}
 
+.header-info-text {
+    font-size: 1.2rem;
+}
 
 .date-time-stamp {
     font-size: 0.5rem;
+}
+
+.footer {
+    width: 100%;
 }

@@ -23,7 +23,12 @@ app.get("/headlines", async (req, res) => {
     });
 
     const articleData = response.data.articles;
-    res.render("headlines", { articleData });
+    res.render("headlines", {
+      articleData,
+      numHeadlines,
+      country,
+      getCountryName,
+    });
   } catch (error) {
     console.error(error);
     res.status(500).send("Error fetching headlines");
@@ -33,6 +38,18 @@ app.get("/headlines", async (req, res) => {
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/form.html");
 });
+
+function getCountryName(countryCode) {
+  const countries = {
+    us: "United States",
+    ca: "Canada",
+    gb: "United Kingdom",
+    au: "Australia",
+    // Add more country codes and names here as needed
+  };
+
+  return countries[countryCode] || countryCode;
+}
 
 app.listen(port, () => {
   console.log(`Express app listening at http://localhost:${port}`);
