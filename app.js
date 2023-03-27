@@ -4,11 +4,14 @@ require("dotenv").config();
 
 const app = express();
 const port = process.env.PORT || 4000;
-
 const apiKey = process.env.API_KEY;
 
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
+
+app.get("/", (req, res) => {
+  res.sendFile(__dirname + "/form.html");
+});
 
 app.get("/headlines", async (req, res) => {
   try {
@@ -35,17 +38,12 @@ app.get("/headlines", async (req, res) => {
   }
 });
 
-app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/form.html");
-});
-
 function getCountryName(countryCode) {
   const countries = {
     us: "United States",
     ca: "Canada",
     gb: "United Kingdom",
     au: "Australia",
-    // Add more country codes and names here as needed
   };
 
   return countries[countryCode] || countryCode;
