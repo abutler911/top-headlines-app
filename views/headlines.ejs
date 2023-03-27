@@ -13,43 +13,35 @@
   </head>
   <body>
     <div class="container">
-      <h1 class="text-center">Top Headlines</h1>
+      <h1 class="text-center">TOP HEADLINES</h1>
       <div class="row gx-5">
         <% articleData.forEach((article) => { %>
         <div class="col-12 mb-4">
-          <div
-            class="bg-image hover-overlay ripple shadow-2-strong rounded-5"
-            data-mdb-ripple-color="light"
-          >
+          <div class="card">
             <img
               src="<%=article.urlToImage%>"
-              class="img-fluid article-image"
+              class="img-fluid article-image card-img-top"
             />
-            <a href="#!">
-              <div
-                class="mask"
-                style="background-color: rgba(251, 251, 251, 0.15)"
-              ></div>
-            </a>
+            <div class="card-body">
+              <span class="badge bg-danger px-2 py-1 shadow-1-strong mb-3"
+                >News of the day</span
+              >
+              <p class="date-time-stamp text-muted">
+                Published at: <%=article.publishedAt%>
+              </p>
+              <h4><strong><%= article.title %></strong></h4>
+              <p class="text-muted"><%= article.description %></p>
+              <p class="text-muted source">Source: <%=article.source.name%></p>
+              <a href="<%=article.url%>"
+                ><button type="button" class="btn btn-primary">
+                  Read more
+                </button></a
+              >
+            </div>
           </div>
         </div>
 
-        <div class="col-12 mb-4">
-          <span class="badge bg-danger px-2 py-1 shadow-1-strong mb-3"
-            >News of the day</span
-          >
-          <p class="date-time-stamp text-muted">
-            Published at: <%=article.publishedAt%>
-          </p>
-          <h4><strong><%= article.title %></strong></h4>
-          <p class="text-muted"><%= article.description %></p>
-          <p class="text-muted source">Source: <%=article.source.name%></p>
-          <a href="<%=article.url%>"
-            ><button type="button" class="btn btn-primary">Read more</button></a
-          >
-          <hr />
-        </div>
-        <% }) %>
+        <%})%>
       </div>
     </div>
 

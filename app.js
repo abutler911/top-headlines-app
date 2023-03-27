@@ -21,7 +21,7 @@ app.get("/headlines", async (req, res) => {
         country,
       },
     });
-    console.log(response.data.articles);
+
     const articleData = response.data.articles;
     res.render("headlines", { articleData });
   } catch (error) {

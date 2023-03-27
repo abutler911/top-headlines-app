@@ -23,6 +23,15 @@ p {
     margin-bottom: 10px;
 }
 
+.card {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
 .badge {
     font-size: .9rem;
 }
@@ -32,19 +41,12 @@ p {
 }
 
 .btn {
-    width: 80%;
-    font-size: 1.6rem;
-    margin-left: 10%;
+    width: 100%;
+    font-size: 1.7rem;
+
 }
 
-.article-image {
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-}
+
 
 .date-time-stamp {
     font-size: 0.5rem;
